@@ -7,6 +7,13 @@ public abstract class BaseEmployee {
     private char gender;
     private int getDailyRate;
 
+    public BaseEmployee(String name, int age, char gender, int getDailyRate) {
+        this.name = name;
+        this.age = age;
+        this.gender = gender;
+        this.getDailyRate = getDailyRate;
+    }
+
     public String getName() {
         return name;
     }
