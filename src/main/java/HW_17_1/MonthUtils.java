@@ -1,6 +1,31 @@
 package HW_17_1;
 
-public abstract class MonthUtils {
+public class MonthUtils {
+
+    public static class Month {
+
+        private final String name;
+        private final int daysInMonth;
+        private final int workingDays;
+
+        public Month(String name, int daysInMonth, int workingDays) {
+            this.name = name;
+            this.daysInMonth = daysInMonth;
+            this.workingDays = workingDays;
+        }
+
+        public String getName() {
+            return name;
+        }
+
+        public int getDaysInMonth() {
+            return daysInMonth;
+        }
+
+        public int getWorkingDays() {
+            return workingDays;
+        }
+    }
 
     public static final Month JANUARY = new Month("January", 31, 15);
     public static final Month FEBRUARY = new Month("February", 28, 19);

@@ -5,13 +5,13 @@ public abstract class BaseEmployee {
     private String name;
     private int age;
     private char gender;
-    private int getDailyRate;
+    private int dailyRate;
 
-    public BaseEmployee(String name, int age, char gender, int getDailyRate) {
+    public BaseEmployee(String name, int age, char gender, int dailyRate) {
         this.name = name;
         this.age = age;
         this.gender = gender;
-        this.getDailyRate = getDailyRate;
+        this.dailyRate = dailyRate;
     }
 
     public String getName() {
@@ -38,20 +38,32 @@ public abstract class BaseEmployee {
         this.gender = gender;
     }
 
-    public int getGetDailyRate() {
-        return getDailyRate;
+    public int getDailyRate() {
+        return dailyRate;
     }
 
-    public void setGetDailyRate(int getDailyRate) {
-        this.getDailyRate = getDailyRate;
+    public void setDailyRate(int dailyRate) {
+        this.dailyRate = dailyRate;
     }
 
     public int getSalary(Month[] monthArray) {
         int salary = 0;
 
         for (int i = 0; i < monthArray.length; i++) {
-            salary = getDailyRate * monthArray[i].getWorkingDays();
+            salary += dailyRate * monthArray[i].getWorkingDays();
         }
         return salary;
+    }
+
+    public int getSalary(Month month) {
+        return month.getWorkingDays() * dailyRate;
+    }
+
+    public int getBaseSalary(Month[] monthArray) {
+        return this.getSalary(monthArray);
+    }
+
+    public int getBaseSalary(Month month) {
+        return this.getSalary(month);
     }
 }

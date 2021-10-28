@@ -1,26 +1,10 @@
 package HW_17_1;
 
-public final class Month {
+public interface Month {
 
-    private final String name;
-    private final int daysInMonth;
-    private final int workingDays;
+    String getName();
 
-    Month(String name, int daysInMonth, int workingDays) {
-        this.name= name;
-        this.daysInMonth = daysInMonth;
-        this.workingDays = workingDays;
-    }
+    int getDaysInMonth();
 
-    public String getName() {
-        return name;
-    }
-
-    public int getDaysInMonth() {
-        return daysInMonth;
-    }
-
-    public int getWorkingDays() {
-        return workingDays;
-    }
+    int getWorkingDays();
 }
