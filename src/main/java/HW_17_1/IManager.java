@@ -11,7 +11,4 @@ public interface IManager {
     // поиск наибольшей надбавки (разнице между базовой зарплатой и выплатой) в массиве менеджеров
     int getMaxAllowance(Manager[] managerArray);
 
-    // поиск наименьшей надбавки (разнице между базовой ставки и зарплатой) в массиве менеджеров
-    int getMinAllowance(Manager[] managerArray);
-
 }

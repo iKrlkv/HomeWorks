@@ -75,7 +75,8 @@ public final class Manager extends BaseEmployee implements IManager {
         if (managerArray == null) {
             return 0;
         } else if (managerArray.length == 1) {
-            return managerArray[0].getBaseSalary()
+            return managerArray[0].getSalary((Month[]) MonthUtils.YEAR) - managerArray[0].getBaseSalary((Month[]) MonthUtils.YEAR);
         }
+        return managerArray[0].getBaseSalary((Month[]) MonthUtils.YEAR);
     }
 }

@@ -12,5 +12,18 @@ public class MonthImpl implements Month {
         this.workingDays = workingDays;
     }
 
+    @Override
+    public String getName() {
+        return name;
+    }
 
+    @Override
+    public int getDaysInMonth() {
+        return daysInMonth;
+    }
+
+    @Override
+    public int getWorkingDays() {
+        return workingDays;
+    }
 }
